@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #07111F;
+  color: #F1F5F9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1624;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E344F;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D4C72;
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: rgba(16, 28, 43, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 52, 79, 0.65);
+}
+
+.glass-panel-glow {
+  background: rgba(16, 28, 43, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(22, 37, 54, 0.7);
+  border: 1px solid rgba(30, 52, 79, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+/* Map specific dark theme layer styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #07111F !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Dark tile inversion for OpenStreetMap tiles without needing expensive API keys */
+.dark-tiles .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+/* Leaflet popup styling */
+.leaflet-popup-content-wrapper {
+  background: #101C2B !important;
+  color: #F1F5F9 !important;
+  border: 1px solid #1E344F !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background: #101C2B !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+/* Marker pulse animations */
+@keyframes aegis-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 51, 75, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 14px rgba(255, 51, 75, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 51, 75, 0);
+  }
+}
+
+.pulse-critical {
+  animation: aegis-pulse 1.8s infinite;
+}
+
+@keyframes aegis-pulse-cyan {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(0, 229, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+  }
+}
+
+.pulse-cyan {
+  animation: aegis-pulse-cyan 2s infinite;
+}
+
+/* Simple text glow */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 12px rgba(255, 51, 75, 0.5);
+}
