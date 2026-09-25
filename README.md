@@ -2,6 +2,9 @@
 
 > **“Seconds Matter. Information Should Move Faster.”**
 
+### 🌐 Live Web Demo (GitHub Pages):
+**[https://saras5786.github.io/AEGIS/](https://saras5786.github.io/AEGIS/)**
+
 ---
 
 ### ⚠️ IMPORTANT SIMULATION DISCLAIMER
